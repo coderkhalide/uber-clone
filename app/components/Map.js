@@ -39,15 +39,15 @@ const Map = () => {
     return (
         <View style={tailwind`flex-1 relative`}>
             <TouchableOpacity
-                style={{ top: Constants.statusBarHeight, left: 20, position: 'absolute', zIndex: 100 }}
+                style={[ tailwind`bg-white p-3 rounded-full shadow-lg`,{ top: Constants.statusBarHeight, left: 20, position: 'absolute', zIndex: 100 }]}
                 onPress={() => navigation.push("Home")}
             >
                 <Icon
                     type="antdesign"
                     name="home"
-                    color="white"
+                    color="black"
                     size={16}
-                    style={tailwind`bg-black p-3 rounded-full`}
+                    // style={}
                 />
             </TouchableOpacity>
 

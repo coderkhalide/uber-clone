@@ -42,11 +42,11 @@ const RideOptionsCard = () => {
     }, [origin, destination])
 
     const travelConst = (item) => {
-        return ((travelTimeInformation?.duration.value * SEARCH_CHARGE_RATE * item?.multiplier) / 100).toFixed(2)
+        return ((travelTimeInformation?.duration?.value * SEARCH_CHARGE_RATE * item?.multiplier) / 100).toFixed(2)
     }
 
     const onChoose = () =>{
-        Alert.alert('configurations!!!', `Car: ${selected.title} \nPrice: $${travelConst(selected)} \nDistence: ${travelTimeInformation?.distance.text} \n${travelTimeInformation?.duration.text} Travel time`)
+        Alert.alert('configurations!!!', `Car: ${selected.title} \nPrice: $${travelConst(selected)} \nDistence: ${travelTimeInformation?.distance?.text} \n${travelTimeInformation?.duration.text} Travel time`)
     }
 
     return (
@@ -64,7 +64,7 @@ const RideOptionsCard = () => {
                         style={tailwind`p-3`}
                     />
                 </TouchableOpacity>
-                <Text style={tailwind`text-center text-xl font-bold`}>Select a ride - {travelTimeInformation?.distance.text}</Text>
+                <Text style={tailwind`text-center text-xl font-bold`}>Select a ride - {travelTimeInformation?.distance?.text}</Text>
             </View>
             <View style={tailwind`flex-1 mt-2`}>
                 <FlatList
@@ -82,7 +82,7 @@ const RideOptionsCard = () => {
                             <View style={tailwind`flex-row items-center justify-between flex-1`}>
                                 <View>
                                     <Text style={tailwind`text-xl font-bold text-black`}>{item.title}</Text>
-                                    <Text style={tailwind`text-gray-600`}>{travelTimeInformation?.duration.text} Travel time</Text>
+                                    <Text style={tailwind`text-gray-600`}>{travelTimeInformation?.duration?.text} Travel time</Text>
                                 </View>
                                 <Text style={tailwind`text-gray-800 text-lg`}>
                                     {/* {new Intl.NumberFormat('en-us', {
