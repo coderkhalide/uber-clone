@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, Text, Image } from 'react-native';
+import { View, StyleSheet, Image } from 'react-native';
 import Screen from '../components/Screen';
 import tw from 'tailwind-react-native-classnames';
 import NavOptions from '../components/NavOptions';
@@ -8,6 +8,8 @@ import { GOOGLE_MAP_APIKEY } from '@env'
 import { useDispatch } from 'react-redux';
 import { setDestination, setOrigin } from '../redux/slices/navSlice';
 import NavFavourites from '../components/NavFavourites';
+
+// const GOOGLE_MAP_APIKEY = ""
 
 const HomeScreen = () => {
     const dispatch = useDispatch()

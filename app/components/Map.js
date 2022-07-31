@@ -10,6 +10,8 @@ import { Icon } from 'react-native-elements'
 import Constants from 'expo-constants'
 import { useNavigation } from '@react-navigation/native'
 
+// const GOOGLE_MAP_APIKEY = ""
+
 const Map = () => {
     const origin = useSelector(selectOrigin)
     const destination = useSelector(selectDestination)

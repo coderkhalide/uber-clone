@@ -46,7 +46,8 @@ const RideOptionsCard = () => {
     }
 
     const onChoose = () =>{
-        Alert.alert('configurations!!!', `Car: ${selected.title} \nPrice: $${travelConst(selected)} \nDistence: ${travelTimeInformation?.distance?.text} \n${travelTimeInformation?.duration.text} Travel time`)
+        if(!selected) return Alert.alert('Please select a ride option')
+        navigation.push('SuccessScreen', { data: {...selected, distance: travelTimeInformation?.distance?.text, time: travelTimeInformation?.duration.text, price: travelConst(selected)} })
     }
 
     return (

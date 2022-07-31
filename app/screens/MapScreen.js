@@ -1,11 +1,10 @@
 import { useNavigation } from '@react-navigation/native'
 import React, { useEffect } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { View } from 'react-native'
 import { useSelector } from 'react-redux'
 import tailwind from 'tailwind-react-native-classnames'
 import tw from 'tailwind-react-native-classnames'
 import Map from '../components/Map'
-import NavFavourites from '../components/NavFavourites'
 import MapNavigator from '../navigation/MapNavigator'
 import { selectOrigin } from '../redux/slices/navSlice'
 
@@ -30,5 +29,3 @@ const MapScreen = () => {
 }
 
 export default MapScreen
-
-const styles = StyleSheet.create({})

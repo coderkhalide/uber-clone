@@ -27,6 +27,8 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "description": "Uber clone in react native. \n\n- Navigation\n- Redux, \n- Tailwind CSS\n- Google Autocomplete\n- Google map integration with price and distance matrix\n- and a lot more",
+    "githubUrl": "https://github.com/coderkhalide/uber-clone"
   }
 }
